@@ -2,7 +2,5 @@
     "redis-brain.coffee",
     "tweet.coffee", 
     "shipit.coffee", 
-    "wikipedia.coffee", 
-    "wolfram.coffee",
     "wits.coffee"
 ]
