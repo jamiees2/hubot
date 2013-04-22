@@ -9,7 +9,7 @@ module.exports = (robot) ->
     msg.http("http://gdata.youtube.com/feeds/api/videos")
       .query({
         orderBy: "relevance"
-        'max-results': 15
+        'max-results': 10
         alt: 'json'
         q: query
       })
@@ -18,7 +18,5 @@ module.exports = (robot) ->
         videos = videos.feed.entry
         video  = msg.random videos
 
-        video.link.forEach (link) ->
-          if link.rel is "alternate" and link.type is "text/html"
-            msg.send link.href
+        msg.send "http://youtu.be/" + video.id.$t.split("/").slice(-1)[0]
 
