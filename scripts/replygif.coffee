@@ -31,5 +31,5 @@ module.exports = (robot) ->
     
   # Listen for a command to look up a ReplyGif by tag.
   robot.respond /replygif( me)? (\D+)/i, (msg) ->
-    tag = encodeUriComponent(msg.match[2])
+    tag = encodeURIComponent(msg.match[2])
     msg.send "http://apps.whatcheerinc.com/replygif/#{tag}.gif"
