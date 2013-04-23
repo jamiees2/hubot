@@ -1,7 +1,9 @@
 [
+	"redis-brain.coffee",
     "tweet.coffee", 
     "shipit.coffee", 
     "wits.coffee",
     "trollicon.coffee",
-    "wolfram.coffee"
+    "wolfram.coffee",
+    "thanks-obama.coffee"
 ]
