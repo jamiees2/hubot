@@ -4,5 +4,9 @@
     "shipit.coffee", 
     "wits.coffee",
     "trollicon.coffee",
-    "thanks-obama.coffee"
+    "thanks-obama.coffee",
+    "tell.coffee",
+    "tasks.coffee",
+    "xkcd.coffee",
+    "sensitive.coffee"
 ]
