@@ -2,5 +2,6 @@
     "tweet.coffee", 
     "shipit.coffee", 
     "wits.coffee",
-    "trollicon.coffee"
+    "trollicon.coffee",
+    "wolfram.coffee"
 ]
