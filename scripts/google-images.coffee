@@ -1,20 +1,27 @@
 # Description:
 #   A way to interact with the Google Images API.
 #
+# Dependencies:
+#   node-imgur
+#
 # Commands:
 #   hubot image me <query> - The Original. Queries Google Images for <query> and returns a random top result.
 #   hubot animate me <query> - The same thing as `image me`, except adds a few parameters to try to return an animated GIF instead.
 #   hubot mustache me <url> - Adds a mustache to the specified URL.
 #   hubot mustache me <query> - Searches Google Images for the specified query and mustaches it.
 
+imgur = require 'imgur-node-api';
+imgur.setClientID 'ea63396945e58d3'
 module.exports = (robot) ->
   robot.respond /(image|img)( me)? (.*)/i, (msg) ->
     imageMe msg, msg.match[3], (url) ->
-      msg.send url
+      imgurUp url, (data) ->
+        msg.send data.data.link
 
   robot.respond /animate( me)? (.*)/i, (msg) ->
     imageMe msg, msg.match[2], true, (url) ->
-      msg.send url
+      imgurUp url, (data) ->
+        msg.send data.data.link
 
   robot.respond /(?:mo?u)?sta(?:s|c)he?(?: me)? (.*)/i, (msg) ->
     type = Math.floor(Math.random() * 3)
@@ -22,10 +29,12 @@ module.exports = (robot) ->
     imagery = msg.match[1]
 
     if imagery.match /^https?:\/\//i
-      msg.send "#{mustachify}#{imagery}"
+      imgurUp "#{mustachify}#{imagery}", (data) ->
+        msg.send data.data.link
     else
       imageMe msg, imagery, false, true, (url) ->
-        msg.send "#{mustachify}#{url}"
+        imgurUp "#{mustachify}#{url}", (data) ->
+          msg.send data.data.link
 
 imageMe = (msg, query, animated, faces, cb) ->
   cb = animated if typeof animated == 'function'
@@ -40,5 +49,10 @@ imageMe = (msg, query, animated, faces, cb) ->
       images = images.responseData?.results
       if images?.length > 0
         image  = msg.random images
-        cb "#{image.unescapedUrl}#.png"
+        cb image.unescapedUrl
+
+imgurUp = (url, cb) ->
+  imgur.upload url, (error,data) ->
+    cb data
+  
 
