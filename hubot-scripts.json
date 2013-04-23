@@ -8,6 +8,5 @@
     "tell.coffee",
     "tasks.coffee",
     "xkcd.coffee",
-    "replygif.coffee",
     "remind.coffee"
 ]
