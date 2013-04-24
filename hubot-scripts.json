@@ -8,9 +8,10 @@
     "tasks.coffee",
     "xkcd.coffee",
     "remind.coffee",
-    "ascii.coffee",
     "commandlinefu.coffee",
-    "buscemi.coffee",
     "wat.coffee",
-    "remind.coffee"
+    "calm-down.coffee",
+    "insult.coffee",
+    "rageface.coffee",
+    "emoji.coffee"
 ]
