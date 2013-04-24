@@ -11,5 +11,6 @@
     "commandlinefu.coffee",
     "wat.coffee",
     "calm-down.coffee",
-    "insult.coffee"
+    "insult.coffee",
+    "octocat.coffee"
 ]
