@@ -1,12 +1,15 @@
 [
 	"redis-brain.coffee",
-    "tweet.coffee", 
     "shipit.coffee", 
-    "wits.coffee",
     "trollicon.coffee",
     "thanks-obama.coffee",
     "tell.coffee",
     "tasks.coffee",
     "xkcd.coffee",
-    "remind.coffee"
+    "remind.coffee",
+    "ascii.coffee",
+    "commandlinefu.coffee",
+    "defprogramming.coffee",
+    "buscemi.coffee",
+    "wat.coffee",
 ]
