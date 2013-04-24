@@ -11,7 +11,5 @@
     "commandlinefu.coffee",
     "wat.coffee",
     "calm-down.coffee",
-    "insult.coffee",
-    "rageface.coffee",
-    "emoji.coffee"
+    "insult.coffee"
 ]
