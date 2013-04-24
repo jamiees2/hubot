@@ -1,6 +1,7 @@
 [
 	"redis-brain.coffee",
     "shipit.coffee", 
+    "wits.coffee",
     "trollicon.coffee",
     "thanks-obama.coffee",
     "tell.coffee",
@@ -12,4 +13,5 @@
     "defprogramming.coffee",
     "buscemi.coffee",
     "wat.coffee",
+    "remind.coffee"
 ]
